@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuizMaze</title>
+  <link rel="stylesheet" href="css/style.css" />
+  
+
+</head>
+<body>
+
+  <!-- 🔝 Header / Navbar -->
+  <header class="header-bar">
+    <div class="logo-title">
+      <a href="index.html" class="logo-link" aria-label="Go to Homepage">
+      <img src="photos/logo.png" alt="QuizMaze Logo" class="logo" />
+      <h2>QuizMaze</h2>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="play.html">Play</a></li>
+        <li><a href="create.html">Create Quiz</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <!-- Toggle switch for Dark Mode -->
+<div class="dark-toggle-container">
+  <label class="switch">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider round"></span>
+  </label>
+  <span id="modeLabel">Light Mode</span>
+</div>
+
+
+        </li>
+      </ul>
+      
+
+    </nav>
+  </header>
+
+    <!-- 🚀 Hero Banner -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Build your brain with <span>QuizMaze</span> 🧠</h1>
+      <p>Explore smart quizzes built like DSA trees. Learn while you play!</p>
+      <a href="play.html"><button>Start Quiz ➡️</button></a>
+      
+    </div>
+    <div class="hero-img">
+      <img src="photos/pic1.png" alt="quiz illustration" />
+    </div>
+  </section>
+
+    <!-- 💡 Features -->
+  <section class="features">
+    <h2>Why QuizMaze?</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>🔗 Based on DSA</h3>
+        <p>Uses tree and graph logic to structure your quiz intelligently.</p>
+      </div>
+      <div class="card">
+        <h3>🧠 Learn as You Go</h3>
+        <p>Explore topics while answering, like a decision-based journey.</p>
+      </div>
+      <div class="card">
+        <h3>🎨 Custom Quizzes</h3>
+        <p>Create and share your own quizzes using the visual editor.</p>
+      </div>
+      <div class="card">🎨 Create Custom Quizzes</div>
+      <div class="card">⏱ Timer-Based Challenges</div>
+      <div class="card">📊 Track Your Score</div>
+      <div class="card">🌙 Dark Mode Support</div>
+      <div class="card">🔐 Secure & Offline</div>
+    </div>
+  </section>
+
+    <!-- 📨 Newsletter -->
+  <section class="newsletter">
+    <h3>Stay Updated</h3>
+    <p>Join our mailing list for updates and tips!</p>
+    <input type="email" placeholder="Enter your email" />
+    <button>Subscribe</button>
+    
+    <div class="color-picker">
+  <label for="themeColor">🎨 Pick Theme:</label>
+  <input type="color" id="themeColor" value="#007bff" />
+  <button id="resetTheme">♻️ Reset</button>
+</div>
+  </section>
+  
+
+
+
+
+
+
+
+ 
+
+    <!-- 📞 Footer -->
+  <footer>
+    <p>&copy; 2025 QuizMaze by Himanshu Srivastava</p>
+    <p>Contact: srivastavahimanshu071@gmail.com</p>
+  </footer>
+  <script src="js/script.js"></script>
+
+   <audio id="correctSound" src="correct.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="wrong.mp3" preload="auto"></audio>
+
+  <audio id="bgMusic" src="quiz-music-158558.mp3" loop></audio>
+<button id="musicToggle">🔊 Music On</button>
+
+<!-- Floating Chatbot Button -->
+<a href="chatbot.html" class="chatbot-button" title="Need Help? Chat with us!">
+  💬
+</a>
+
+<script src="js/theme.js"></script>
+
+</body>
+</html>

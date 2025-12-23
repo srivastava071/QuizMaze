@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Play Quiz | QuizMaze</title>
+  <link rel="stylesheet" href="css/play.css" />
+</head>
+<body>
+
+
+
+   <header class="header-bar">
+    <div class="logo-title">
+      <a href="index.html" class="logo-link" aria-label="Go to Homepage">
+      <img src="photos/logo.png" alt="QuizMaze Logo" class="logo" />
+      <h2>QuizMaze</h2>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="play.html">Play</a></li>
+        <li><a href="create.html">Create Quiz</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><span id="userInfo"></span></li>
+      <li><button id="logoutBtn" style="display:none;">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="quiz-selector">
+    <label for="quizType">Choose Quiz:</label>
+    <select id="quizType">
+      <option value="dsa">DSA Quiz</option>
+      <option value="web">Web Quiz</option>
+      <option value="custom">Your Custom Quiz</option>
+    </select>
+
+    <label for="quizDifficulty">Difficulty:</label>
+    <select id="quizDifficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+</select>
+
+    <button onclick="startSelectedQuiz()">Start Quiz</button>
+  </div>
+
+  <section class="quiz-container">
+    <div id="infoBar">
+      <p><strong>Category:</strong> <span id="catName"></span></p>
+      <p><strong>Difficulty:</strong> <span id="diffName"></span></p>
+      <p id="timer">⏱ 10s</p>
+    </div>
+<div id="quizBox">
+    <!-- Quiz question will load here -->
+  </div>
+</section>
+<!-- Show Leaderboard Button -->
+<button id="showLeaderboardBtn" class="leaderboard-button">🏆 Show Leaderboard</button>
+
+<!-- Leaderboard Modal -->
+<div id="leaderboardModal" class="leaderboard-modal">
+  <div class="leaderboard-content">
+    <span id="closeLeaderboard" class="close">&times;</span>
+    <h2>🏆 Top 10 Players</h2>
+    <ol id="leaderboardList"></ol>
+    <button id="resetLeaderboardBtn" class="reset-leaderboard-btn">Reset Leaderboard</button>
+
+  </div>
+</div>
+
+<!-- Name Input Modal -->
+<div id="nameModal" class="leaderboard-modal">
+  <div class="leaderboard-content">
+    <h2>🎉 Enter Your Name</h2>
+    <input type="text" id="playerName" placeholder="Your name" />
+    <button id="submitName">Submit</button>
+  </div>
+</div>
+</section>
+</main>
+
+  <footer>
+    <p>&copy; 2025 QuizMaze by Himanshu Srivastava</p>
+  </footer>
+
+  <script src="js/play.js"></script>
+
+  <script src="js/theme.js"></script>
+
+</body>
+</html>

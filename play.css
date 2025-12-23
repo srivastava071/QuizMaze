@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main{
+  margin-top: 100px;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+  color: #1f1f1f;
+  animation: bgFlow 10s ease infinite alternate;
+  transition: all 0.4s ease-in-out;
+}
+
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Header / Navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  background: linear-gradient(to right, #6C63FF, #00C9FF);  /* Signature */
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  height: 60px;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: white;
+  transition: width 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+.quiz-selector {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.quiz-selector select, .quiz-selector button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+.quiz-selector button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.quiz-selector button:hover {
+  background-color: #0056b3;
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+#infoBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#quizBox h2 {
+  margin-bottom: 15px;
+}
+
+#quizBox button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#quizBox button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background: linear-gradient(to right, #6C63FF, #00C9FF);  /* Signature */
+
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.leaderboard-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.leaderboard-button:hover {
+  background: #0056b3;
+}
+
+.leaderboard-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.leaderboard-content {
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+#leaderboardList {
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  text-align: left;
+}
+
+#leaderboardList li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+input#playerName {
+  padding: 10px;
+  width: 80%;
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#submitName {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#submitName:hover {
+  background-color: #218838;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+
+nav ul li button {
+  padding: 8px 14px;
+  border: none;
+  background-color: #ff4d4d;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav ul li button:hover {
+  background-color: #e60000;
+}
+
+
+
+.reset-leaderboard-btn {
+  margin-top: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reset-leaderboard-btn:hover {
+  background-color: #c82333;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+/* Make the logo-title clickable and styled */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.logo-link h2 {
+  margin-left: 10px;
+}
+
+/* Optional: hover effect */
+.logo-link:hover h2 {
+  text-decoration: underline;
+}

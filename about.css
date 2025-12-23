@@ -1,0 +1,148 @@
+/* Matches style with login.css/play.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+  color: #1f1f1f;
+  animation: bgFlow 10s ease infinite alternate;
+  transition: all 0.4s ease-in-out;
+}
+
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Header / Navbar */
+header {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  background: linear-gradient(to right, #6C63FF, #00C9FF);  /* Signature */
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  height: 60px;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: white;
+  transition: width 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+/* Make the logo-title clickable and styled */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.logo-link h2 {
+  margin-left: 10px;
+}
+
+/* Optional: hover effect */
+.logo-link:hover h2 {
+  text-decoration: underline;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.about-container h1 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.about-container ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.about-container li {
+  margin-bottom: 8px;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+
+footer {
+  background: linear-gradient(to right, #6C63FF, #00C9FF);  /* Signature */
+
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+

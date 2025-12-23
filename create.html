@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="'en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Create Quiz | QuizMaze</title>
+        <link rel="stylesheet" href="css/create.css" />
+    </head>
+
+
+<body>
+    <header class="header-bar">
+    <div class="logo-title">
+      <a href="index.html" class="logo-link" aria-label="Go to Homepage">
+      <img src="photos/logo.png" alt="QuizMaze Logo" class="logo" />
+      <h2>QuizMaze</h2>
+      </a>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="play.html">Play</a></li>
+                <li><a href="create.html">Create Quiz</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <h1>🛠️ Create Your Quiz</h1>
+        <form id="quizForm">
+            <label>Question: </label>
+            <input type="text" id="question" required />
+
+           <label>Options:</label>
+           <input type="text" class="option" placeholder="Option 1" required /> 
+           <input type="text" class="option" placeholder="Option 2" required />
+           <input type="text" class="option" placeholder="Option 3" required />
+           <input type="text" class="option" placeholder="Option 4" required />
+
+           <label>Correct Option (1-4):</label>
+           <input type="number" id="correct" min="1" max="4" required />
+
+           <button type="submit">➕ Add Question</button>
+        </form>
+
+    <div id="savedQuestions">
+      <h2>📋 Saved Questions</h2>
+      <ul id="questionList"></ul>
+    </div>
+    </section>
+
+    <footer>
+    <p>&copy; 2025 QuizMaze by Himanshu Srivastava</p>
+  </footer>
+
+  <script src="js/create.js"></script>
+
+  <script src="js/theme.js"></script>
+
+</body>
+</html>
